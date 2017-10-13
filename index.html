@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/loan.css">
+	<script type="text/javascript" src="vue/vue.js"></script>
+	<title>Loan Calculator</title>
+</head>
+<body>
+	<center>
+    <div id="app">
+
+    <div class="form-group">
+        <label class="sr-only" for="exampleInputAmount">Amount (in naira)</label>
+            <div class="input-group">
+                <div class="input-group-addon">&#8358</div>
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" v-model="amount" >
+                    <div class="input-group-addon">.00</div>
+            </div>
+    </div>
+
+    <div class="form-group">
+            <label class="sr-only" for="exampleInputInterestRate">Interest Rate</label>
+                <div class="input-group">
+                     <input type="text" class="form-control" id="exampleInputInterestRate" placeholder="Interest Rate" v-model="interestRate" >
+                        <div class="input-group-addon">%</div>
+                </div>
+        </div>
+
+
+        <div class="form-group">
+                <label class="sr-only" for="exampleInputMonths">Duration of Repayment</label>
+                    <div class="input-group">
+                         <input type="text" class="form-control" id="exampleInputMonths" placeholder="Months" v-model="months" >
+                            <div class="input-group-addon">In Months</div>
+                    </div>
+            </div>
+
+   
+    <button class="btn btn-primary" type="submit" v-on:click="calculate">Calculate</button>
+
+
+    <p>{{display}}</p>
+  </div>
+</center>
+	<script type="text/javascript" src="loan.js"></script>
+</body>
+</html>
